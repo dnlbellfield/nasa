@@ -9,6 +9,11 @@
         <!-- Main CSS -->
         <link href="assets/css/theme.min.css" rel="stylesheet">
         <title>NASA Astronomy Picture of the Day</title>
+        <style>
+          .not-main {
+            /* visibility: hidden; */
+          }
+        </style>
     </head>
 
     <body>
@@ -24,36 +29,34 @@
                 <div class="container pt-14 pb-14 z-index-1 position-relative">
                     <div class="row pb-7 pt-lg-7 justify-content-center mx-auto text-center">
                         <div class="col-lg-10 col-xl-8 mb-4 mb-md-0">
-                            <h2 class="mb-3 mb-lg-4 text-warning">NASA
-                            </h2>
+                            <h4 class="mb-3 mb-lg-4 text-warning">NASA
+                            </h4>
                             <h1 class="mb-4 display-2">Astronomy <br> Picture of the Day</h1>
                             <p class="mb-lg-5 mb-0 px-lg-9 lead">
-                              <a href="https://apod.nasa.gov/apod/archivepix.html">Discover the cosmos!</a>  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.
+                              <a  style="font-weight:400 ;"href="https://apod.nasa.gov/apod/archivepix.html">Discover the cosmos!</a>  Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. &nbsp;Pick a date and search!
                             </p>
-                            <div class="container">
-                              <h2> Pick a date  <br>
-                         </h2>
-                              <input type="date" placeholder="YYYY-MM-DD"
-                              min="1996-01-01" max="2023-01-01">
-                              <button class="btn-yo"> Search</button>
-
-                            </div>
-                        
-                        
-                      
+                            <input id="nasa-input" type="date" placeholder="YYYY-MM-DD"
+                            min="1996-01-01" max="2023-01-01">
+                            <button style="color:white; font-size: 26px;"class="btn btn-yo"> Search</button>
                         </div>
+                        
                     </div>
+
+                    
                 </div>
             </section>
             <!--/.Page-header-->
+          </main>
+          <div class="not-main">
 
+        
             <section class="position-relative hr-linear-bottom bg-white">
                 <div class="container pb-9 pb-lg-11">
                     <div class="row">
                         <div class="col-12">
                             <div class="position-relative">
                                 <img src="assets/img/vectors/pattern-dots3.svg" data-inject-svg alt=""
-                                    class="width-160 h-auto position-absolute start-0 bottom-0 fill-warning ms-n5 mb-n5">
+                                    class="width-160 h-auto position-absolute start-0 bottom-0 fill-warning ms-n5 mb-n5 ">
                                 <img src="" alt=""
                                     class="img-fluid mt-n15 rounded-4 shadow-lg position-relative this-here">
                             </div>
@@ -61,12 +64,8 @@
                         <div class="col-xl-5 col-11 offset-lg-5 col-lg-6">
                             <div
                                 class="py-5 px-3 px-lg-5 shadow-lg rounded-3 ms-4 ms-lg-0 bg-white position-relative mt-n5 mt-lg-n12">
-                                <p class="mb-3">Category - <strong><a href="#" class="text-dark link-underline pb-0">UI
-                                            UX Design</a></strong></p>
-                                <p class="mb-3">Client - <strong><a href="#" class="text-dark link-underline pb-0">Funky
-                                            bakers</a></strong></p>
-                                <p class="mb-3">Year - <strong class="text-dark">2020-2021</strong></p>
-                                <p class="mb-0">Country - <strong class="text-dark">Ohio, USA</strong></p>
+                                <p style="font-size: 26px;"class="mb-3 nasa-title"></p>
+                              
                             </div>
                         </div>
                     </div>
@@ -105,8 +104,8 @@
                                 Extremes
                                 of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
                                 ethics, very popular during.
-                            </p>
-                             -->
+                            </p> -->
+                            
 
                             <blockquote
                                 class="blockquote pb-5 pb-lg-6 px-4 px-lg-6 border-top shadow-lg border-primary border-3 rounded-4 position-relative mb-9 mb-lg-11"
@@ -118,21 +117,13 @@
                                         <img class="fill-white width-2x h-auto"
                                         src="assets/img/vectors/quote-sign.svg" alt="" data-inject-svg>
                                     </div>
-                                    <p class="mb-6 fs-3 font-serif">
-                                        The new designs are more consistent and more true to who we are as a company.
-                                        Very fresh, light and easy to deal with. So exciting seeing the design for the
-                                        new site go live. Great work!
+                                    <p class="mb-6 fs-3 font-serif nasa-text">
+                                        
                                     </p>
                                     
                                     <div class="d-flex align-items-center">
-                                        <img src="assets/img/avatar/4.jpg" alt="Image"
-                                            class="avatar lg shadow-lg rounded-pill me-3 flex-shrink-0">
-                                            <div>
-                                                <h5 class="mb-0">
-                                                    Gunjan Sharma
-                                                </h5>
-                                                <small class="text-muted">Team Funky Bakers</small>
-                                            </div>
+                      
+                                           
                                     </div>
                                 </div>
                             </blockquote>
@@ -146,16 +137,19 @@
             </section>
 
             <!--/.End section-->
-        </main>
+          </div>
 
 
         <!-- begin Back to Top button -->
         <a href="#" class="toTop">
             <i class="bx bxs-up-arrow"></i>
         </a>
+        <script>
+          document.querySelector(".not-main").style.visibility = "hidden";
+
+        </script>
         <!-- scripts -->
-        <!-- <script type="text/javascript" src="js/index.js"></script> -->
-        <script src="js/main.js"></script>
+        <script src="assets/js/theme.bundle.js"></script>
 
         <!--Page script-->
         <script src="assets/vendor/node_modules/js/gsap.min.js"></script>
@@ -193,6 +187,54 @@
                     })
             });
     
+         </script>
+         <script async>
+           // Your API key for Dnlbellfield@gmail.com is:  cYHfe95lZaojXTRkycOfu3dCqkMhPyuKYr2LhMYa
+// You can start using this key to make web service requests. Simply pass your key in the URL when making a web request. Here's an example:
+
+// https://api.nasa.gov/planetary/apod?api_key=cYHfe95lZaojXTRkycOfu3dCqkMhPyuKYr2LhMYa
+
+// ex https://api.nasa.gov/EPIC/api/natural/images?api_key=cYHfe95lZaojXTRkycOfu3dCqkMhPyuKYr2LhMYa
+
+// https://api.nasa.gov/planetary/apod?api_key=cYHfe95lZaojXTRkycOfu3dCqkMhPyuKYr2LhMYa
+// https://api.nasa.gov/planetary/apod
+const apodBtn = document.querySelector('.btn-yo');
+
+
+
+async function getApod() {
+  console.log('clicked');
+  let thisHere = document.querySelector('.this-here');
+  console.log(thisHere);
+  let date = document.getElementById('nasa-input').value;
+  console.log('thing', date);
+  const url = `https://api.nasa.gov/planetary/apod?api_key=cYHfe95lZaojXTRkycOfu3dCqkMhPyuKYr2LhMYa&date=${date}`
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  const data = await response.json()
+  console.log(data);
+  let element123 = document.querySelector('.this-here');
+  console.log(element123);
+  document.querySelector('.this-here').src = data.hdurl;
+  let theParagraph = document.querySelector('.nasa-text');
+  theParagraph.innerHTML = data.explanation;
+  document.querySelector('.nasa-title').innerHTML = data.title;
+  thisHere.style.display = "block";
+  // let notMain = document.querySelector('.not-main');
+  // console.log("not main" , notMain);
+  // notMain.style.visibility = 'visible';
+  document.querySelector(".not-main").style.visibility = "visible";
+
+
+}
+
+
+apodBtn.addEventListener('click',getApod);
+
+
+
          </script>
     </body>
 

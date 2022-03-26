@@ -23,8 +23,9 @@ async function getApod() {
   }
   const data = await response.json()
   console.log(data);
-
-  document.querySelector('this-here').src = data.hdurl;
+  let element123 = document.querySelector('this-here');
+  // document.querySelector('this-here').src = data.hdurl;
+  console.log(element123);
   document.querySelector('h3').innerText = data.explanation;
   date.innerText ="";
   // loader.style.display = "none";
